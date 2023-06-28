@@ -1,12 +1,12 @@
+
 import pickle
 import streamlit as st
-from streamlit_option_menu import option_menu 
+from streamlit_option_menu import option_menu
 
 
-
-diabetes_model= pickle.load(open('diabetes_model.pkl','rb'))
-heart_disease_model=pickle.load(open('heart_disease_model.pkl','rb'))
-parkinsons_model=pickle.load(open('parkinsons_model.pkl','rb'))
+diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
+heart_disease_model = pickle.load(open('heart_disease_model.pkl','rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.pkl','rb'))
 
 
 # sidebar for navigation
@@ -231,4 +231,3 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
-
